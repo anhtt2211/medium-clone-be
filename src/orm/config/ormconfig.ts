@@ -19,6 +19,13 @@ const config: ConnectionOptions = {
     migrationsDir: 'src/orm/migrations',
     subscribersDir: 'src/orm/subscriber',
   },
+  ssl: true,
+  extra: {
+    ssl: {
+      rejectUnauthorized: false,
+    },
+  },
+  url: process.env.PG_URL,
   namingStrategy: new SnakeNamingStrategy(),
 };
 
