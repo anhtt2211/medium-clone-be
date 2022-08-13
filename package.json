@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Bizzi Medium Clone",
   "scripts": {
-    "start": "debug=* NODE_PATH=./src ts-node-dev --respawn ./src/index.ts",
+    "start": "NODE_PATH=./dist node ./dist/index.js",
+    "dev": "debug=* NODE_PATH=./src ts-node-dev --respawn ./src/index.ts",
     "build": "rimraf dist && tsc",
     "lint": "eslint --max-warnings 0 . && npm run tsc",
     "lint-fix": "eslint --fix .",
